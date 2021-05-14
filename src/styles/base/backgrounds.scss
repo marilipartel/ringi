@@ -9,3 +9,11 @@
     background-color: $white;
   }
 }
+
+.details {
+  background-image: url("/assets/images/ringi-aripark3.jpg");
+  background-size: cover;
+  &__content {
+    background-color: $transparentwhite;
+  }
+}

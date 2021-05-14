@@ -1,0 +1,20 @@
+.table {
+  color: $bodytext;
+}
+
+.details {
+  &__title {
+    border-top: 4px solid $bodytext;
+    padding: 15px 0 30px 0;
+  }
+}
+
+tbody {
+  border-top: 2px solid $bodytext;
+  border-bottom: 2px solid $bodytext;
+}
+
+.table td {
+  border-top: 1px solid $bodytext;
+  padding: 6px 14px 6px 0;
+}
