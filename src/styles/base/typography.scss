@@ -29,10 +29,19 @@ h2 {
   line-height: 40px;
 }
 
+p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .italic {
   font-style: italic;
 }
 
 .bold {
   font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
 }

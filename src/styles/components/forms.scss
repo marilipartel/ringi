@@ -1,0 +1,36 @@
+.cta {
+  &__content {
+    color: white;
+  }
+  &__title {
+    border-top: 4px solid $white;
+    padding-top: 16px;
+  }
+  & .body__XS {
+    color: $white;
+    margin-bottom: 10px;
+    & a {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background: none;
+  border: 1px solid $white;
+  padding: 11px 8px;
+  color: $white;
+}
+
+::placeholder {
+  color: $white;
+  opacity: 1;
+}

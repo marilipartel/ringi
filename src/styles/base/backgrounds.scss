@@ -17,3 +17,11 @@
     background-color: $transparentwhite;
   }
 }
+
+.cta {
+  background-image: url("/assets/images/ringi-aripark1.jpg");
+  background-size: cover;
+  &__content {
+    background-color: $transparentblack;
+  }
+}
