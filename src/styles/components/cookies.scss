@@ -1,0 +1,19 @@
+.cookies {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  &__content {
+    width: 291px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    & p {
+      margin-right: 16px;
+      & a {
+        color: $gray8;
+        text-decoration: underline;
+      }
+    }
+  }
+}

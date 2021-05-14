@@ -1,0 +1,23 @@
+.button {
+  &__primary {
+    padding: 8px 24px;
+    color: $white;
+    background-color: $error;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &__secondary {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: $bodytext;
+    background-color: $white;
+    border: 1px solid $bodytext;
+  }
+  &__scroll {
+    border: none;
+    background: none;
+  }
+}

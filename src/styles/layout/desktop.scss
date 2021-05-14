@@ -1,0 +1,37 @@
+p {
+  margin: 0;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  border: 20px solid $white;
+  border-radius: 0 0 100px 0;
+  text-align: center;
+  position: relative;
+  &__logo {
+    margin: 24px 27px;
+  }
+  &__title {
+    padding: 345px 151px 64px 251px;
+  }
+  &__languages {
+    margin: 15px 27px;
+  }
+  &__link {
+    margin-left: 13px;
+  }
+}
+
+.hero nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  &__scroll {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+  }
+}

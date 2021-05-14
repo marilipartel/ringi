@@ -1,0 +1,11 @@
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.67) 100px, rgba(0, 0, 0, 0)),
+    linear-gradient(rgba(0, 0, 0, 0) 427px, rgba(0, 0, 0, 0.67)),
+    center / cover url("/assets/images/ringi-aripark1.jpg");
+}
+
+.cookies {
+  &__content {
+    background-color: $white;
+  }
+}

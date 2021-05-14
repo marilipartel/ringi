@@ -1,0 +1,34 @@
+body {
+  font-family: "Helvetica", sans-serif;
+}
+
+.body {
+  &__XS {
+    font-size: 12px;
+    line-height: 18px;
+    color: $gray8;
+  }
+}
+
+.hero {
+  &__link {
+    color: $white;
+  }
+}
+
+h1 {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+  color: $white;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
