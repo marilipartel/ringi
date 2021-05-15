@@ -32,13 +32,13 @@ const detailsContent = document.querySelector(".details__content");
 const ctaContent = document.querySelector(".cta__content");
 
 window.addEventListener("scroll", function () {
-  if (window.scrollY >= detailsCoords.top + 600) {
+  if (window.scrollY >= detailsCoords.top) {
     detailsContent.classList.remove("hidden-panel");
   }
 });
 
 window.addEventListener("scroll", function (e) {
-  if (window.scrollY >= ctaCoords.top + 600) {
+  if (window.scrollY >= detailsCoords.bottom) {
     ctaContent.classList.remove("hidden-panel");
   }
 });

@@ -28,6 +28,7 @@ textarea {
   border: 1px solid $white;
   padding: 11px 8px;
   color: $white;
+  max-width: 100%;
 }
 
 input[type="submit"] {
