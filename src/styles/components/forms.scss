@@ -30,7 +30,15 @@ textarea {
   color: $white;
 }
 
+input[type="submit"] {
+  margin-top: 12px;
+}
+
 ::placeholder {
   color: $white;
   opacity: 1;
+}
+
+.errorbrdr {
+  border: 2px solid $error !important;
 }

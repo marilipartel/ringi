@@ -54,3 +54,39 @@ btnScroll.addEventListener("click", function (e) {
 stickyBtn.addEventListener("click", function (e) {
   cta.scrollIntoView({ behavior: "smooth" });
 });
+
+///////////////////////////////////FORM VALIDATION/////////////////////////////////////////////////////////
+
+const nameInput = document.getElementById("nimi");
+const phoneInput = document.getElementById("telefon");
+const emailInput = document.getElementById("epost");
+const commentInput = document.getElementById("kommentaar");
+const form = document.querySelector(".cta__form");
+let isFormValid = false;
+
+const validateInputs = () => {
+  isFormValid = true;
+  nameInput.classList.remove("errorbrdr");
+  phoneInput.classList.remove("errorbrdr");
+  emailInput.classList.remove("errorbrdr");
+  commentInput.classList.remove("errorbrdr");
+
+  if (!nameInput.value) {
+    isFormValid = false;
+    nameInput.classList.add("errorbrdr");
+  } else if (!phoneInput.value) {
+    isFormValid = false;
+    phoneInput.classList.add("errorbrdr");
+  } else if (!emailInput.value) {
+    isFormValid = false;
+    emailInput.classList.add("errorbrdr");
+  } else if (!commentInput.value) {
+    isFormValid = false;
+    commentInput.classList.add("errorbrdr");
+  }
+};
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  validateInputs();
+});
