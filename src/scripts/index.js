@@ -1,4 +1,56 @@
-import '../styles/index.scss';
-import '../styles/carousel.scss';
+import "../styles/index.scss";
 
-console.log('HTML starter set');
+const hero = document.querySelector(".hero");
+const details = document.querySelector(".details");
+const cta = document.querySelector(".cta");
+
+/////////////////////////////////STICKY BUTTON/////////////////////////////////////////////////////////
+
+const stickyBtn = document.querySelector(".button__primary--sticky");
+const btnHeight = stickyBtn.getBoundingClientRect().height;
+
+const stickyButton = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) stickyBtn.classList.remove("hidden");
+  else stickyBtn.classList.add("hidden");
+};
+
+const observerSticky = new IntersectionObserver(stickyButton, {
+  root: null,
+  threshold: 0.1,
+  rootMargin: `-${btnHeight}px`,
+});
+
+observerSticky.observe(hero);
+observerSticky.observe(cta);
+
+/////////////////////////////////REVEALING PANELS////////////////////////////////////////////////////////
+
+const detailsCoords = details.getBoundingClientRect();
+const ctaCoords = cta.getBoundingClientRect();
+const detailsContent = document.querySelector(".details__content");
+const ctaContent = document.querySelector(".cta__content");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= detailsCoords.top + 600) {
+    detailsContent.classList.remove("hidden-panel");
+  }
+});
+
+window.addEventListener("scroll", function (e) {
+  if (window.scrollY >= ctaCoords.top + 600) {
+    ctaContent.classList.remove("hidden-panel");
+  }
+});
+
+///////////////////////////////////SMOOTH SCROLL///////////////////////////////////////////////////////////
+
+const btnScroll = document.querySelector(".button__scroll");
+
+btnScroll.addEventListener("click", function (e) {
+  details.scrollIntoView({ behavior: "smooth" });
+});
+
+stickyBtn.addEventListener("click", function (e) {
+  cta.scrollIntoView({ behavior: "smooth" });
+});
