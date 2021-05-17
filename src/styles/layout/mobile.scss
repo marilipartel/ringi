@@ -1,3 +1,15 @@
+@media (max-width: 372px) {
+  .hero {
+    &__title {
+      display: none;
+      &--mobile {
+        display: block;
+        padding: 0 32px 80px 32px;
+      }
+    }
+  }
+}
+
 @media (max-width: 567px) {
   .hero {
     border: 8px solid $white;
@@ -15,10 +27,10 @@
       margin-left: 0;
     }
     &__title {
-      display: none;
-      &--mobile {
-        padding: 32px;
-      }
+      padding: 0 32px 80px 32px;
+    }
+    &__button {
+      position: sticky;
     }
   }
   .details {

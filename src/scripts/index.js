@@ -38,7 +38,7 @@ window.addEventListener("scroll", function () {
 });
 
 window.addEventListener("scroll", function (e) {
-  if (window.scrollY >= detailsCoords.bottom) {
+  if (window.scrollY >= detailsCoords.top + 500) {
     ctaContent.classList.remove("hidden-panel");
   }
 });
@@ -89,4 +89,13 @@ const validateInputs = () => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   validateInputs();
+});
+
+///////////////////////////////CLOSING COOKIES ALERT//////////////////////////////////////////////////
+
+const btnCookies = document.querySelector(".cookies__button");
+const cookies = document.querySelector(".cookies");
+
+btnCookies.addEventListener("click", function () {
+  cookies.classList.add("hidden");
 });
