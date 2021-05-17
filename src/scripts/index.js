@@ -31,7 +31,7 @@ const ctaCoords = cta.getBoundingClientRect();
 const detailsContent = document.querySelector(".details__content");
 const ctaContent = document.querySelector(".cta__content");
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", function (e) {
   if (window.scrollY >= detailsCoords.top) {
     detailsContent.classList.remove("hidden-panel");
   }
@@ -46,12 +46,17 @@ window.addEventListener("scroll", function (e) {
 ///////////////////////////////////SMOOTH SCROLL///////////////////////////////////////////////////////////
 
 const btnScroll = document.querySelector(".button__scroll");
+const btnHero = document.querySelector(".hero__button");
 
 btnScroll.addEventListener("click", function (e) {
   details.scrollIntoView({ behavior: "smooth" });
 });
 
 stickyBtn.addEventListener("click", function (e) {
+  cta.scrollIntoView({ behavior: "smooth" });
+});
+
+btnHero.addEventListener("click", function (e) {
   cta.scrollIntoView({ behavior: "smooth" });
 });
 
