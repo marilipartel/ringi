@@ -24,13 +24,48 @@ const observerSticky = new IntersectionObserver(stickyButton, {
 observerSticky.observe(hero);
 observerSticky.observe(cta);
 
+/*
+window.addEventListener("scroll", function () {
+  if (window.scrollY > detailsCoords.top) {
+    stickyBtn.classList.remove("hidden");
+  }
+  if (window.scrollY > ctaCoords.top) {
+    stickyBtn.classList.add("hidden");
+  }
+});
+*/
+
 /////////////////////////////////REVEALING PANELS////////////////////////////////////////////////////////
 
 const detailsCoords = details.getBoundingClientRect();
-const ctaCoords = cta.getBoundingClientRect();
 const detailsContent = document.querySelector(".details__content");
+const ctaCoords = cta.getBoundingClientRect();
 const ctaContent = document.querySelector(".cta__content");
 
+const revealDetails = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) detailsContent.classList.remove("hidden-panel");
+};
+
+const revealForm = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) ctaContent.classList.remove("hidden-panel");
+};
+
+const detailsObserver = new IntersectionObserver(revealDetails, {
+  root: null,
+  threshold: 0,
+});
+
+const ctaObserver = new IntersectionObserver(revealForm, {
+  root: null,
+  threshold: 0,
+});
+
+detailsObserver.observe(hero);
+ctaObserver.observe(details);
+
+/*
 window.addEventListener("scroll", function (e) {
   if (window.scrollY >= detailsCoords.top) {
     detailsContent.classList.remove("hidden-panel");
@@ -42,6 +77,7 @@ window.addEventListener("scroll", function (e) {
     ctaContent.classList.remove("hidden-panel");
   }
 });
+*/
 
 ///////////////////////////////////SMOOTH SCROLL///////////////////////////////////////////////////////////
 
