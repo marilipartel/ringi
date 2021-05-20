@@ -37,9 +37,9 @@ window.addEventListener("scroll", function () {
 
 /////////////////////////////////REVEALING PANELS////////////////////////////////////////////////////////
 
-const detailsCoords = details.getBoundingClientRect();
+// const detailsCoords = details.getBoundingClientRect();
 const detailsContent = document.querySelector(".details__content");
-const ctaCoords = cta.getBoundingClientRect();
+// const ctaCoords = cta.getBoundingClientRect();
 const ctaContent = document.querySelector(".cta__content");
 
 const revealDetails = function (entries) {
@@ -55,6 +55,7 @@ const revealForm = function (entries) {
 const detailsObserver = new IntersectionObserver(revealDetails, {
   root: null,
   threshold: 0,
+  rootMargin: "-16px",
 });
 
 const ctaObserver = new IntersectionObserver(revealForm, {
@@ -85,15 +86,15 @@ const btnScroll = document.querySelector(".button__scroll");
 const btnHero = document.querySelector(".hero__button");
 
 btnScroll.addEventListener("click", function (e) {
-  details.scrollIntoView({ behavior: "smooth" });
+  details.scrollIntoView({ behavior: "smooth", block: "center" });
 });
 
 stickyBtn.addEventListener("click", function (e) {
-  cta.scrollIntoView({ behavior: "smooth" });
+  cta.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
 btnHero.addEventListener("click", function (e) {
-  cta.scrollIntoView({ behavior: "smooth" });
+  cta.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
 ///////////////////////////////////FORM VALIDATION/////////////////////////////////////////////////////////

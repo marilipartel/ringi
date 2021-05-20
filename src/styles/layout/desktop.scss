@@ -9,11 +9,20 @@ p {
   border-radius: 0 0 100px 0;
   text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
   &__logo {
     margin: 24px 27px;
   }
   &__title {
-    padding: 345px 151px 64px 251px;
+    padding: 0px 151px 64px 251px;
     &--mobile {
       display: none;
     }
@@ -23,6 +32,11 @@ p {
   }
   &__link {
     margin-left: 13px;
+  }
+  &__button {
+    width: auto;
+    max-width: 304px;
+    margin-bottom: 73px;
   }
 }
 
